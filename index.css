@@ -27,7 +27,7 @@ h3 {
 }
 
 p {
-    line-height: 23px;
+    line-height: 1.5;
 }
 
 .subheading {
@@ -101,12 +101,6 @@ header,
     color: whitesmoke;
 }
 
-/*
-  Challenge:
-   1. Google "how to set the maximum width of an element"  
-   2. Apply a maximum width of 800px to .container
-*/
-
 .container {
     width: 90%;
     max-width: 800px;
@@ -122,15 +116,26 @@ header,
 
 .section-two-image-container {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
 }
 
 .feature-image {
-    width: 48.8%;
     border-radius: 4.6px;
+    margin-bottom: 1em;
 }
 
 footer {
     text-align: center;
     color: #5f29a3;
+}
+
+@media (min-width: 480px){
+    .section-two-image-container{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .feature-image{
+        width: 48.8%;
+    }
 }
